@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+{% extends "base.html"%}
+
+{% block contents %}
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
@@ -18,5 +15,4 @@
         <input type="submit" value="ログイン">
     </form>
     <p><a href="{{ url_for('register') }}">新規登録はこちら</a></p>
-</body>
-</html>
+{% endblock %}

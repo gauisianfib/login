@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
+{% extends "base.html"%}
+
+{% block contents%}
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
@@ -21,5 +18,4 @@
         <a href="{{ url_for('login') }}">ログイン</a> | 
         <a href="{{ url_for('register') }}">新規登録</a>
     {% endif %}
-</body>
-</html>
+{% endblock %}
